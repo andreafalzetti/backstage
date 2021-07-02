@@ -14,9 +14,6 @@
  * limitations under the License.
  */
 
-export * from './catalog';
-export { createBuiltinActions } from './createBuiltinActions';
-export * from './debug';
-export * from './fetch';
-export * from './filesystem';
-export * from './publish';
+export { createFilesystemDeleteAction } from './delete';
+export { createFilesystemRenameAction } from './rename';
+export { createFilesystemListAction } from './list';

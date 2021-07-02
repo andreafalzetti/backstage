@@ -25,6 +25,11 @@ import {
 import { createDebugLogAction } from './debug';
 import { createFetchCookiecutterAction, createFetchPlainAction } from './fetch';
 import {
+  createFilesystemDeleteAction,
+  createFilesystemListAction,
+  createFilesystemRenameAction,
+} from './filesystem';
+import {
   createPublishAzureAction,
   createPublishBitbucketAction,
   createPublishGithubAction,
@@ -68,5 +73,8 @@ export const createBuiltinActions = (options: {
     createDebugLogAction(),
     createCatalogRegisterAction({ catalogClient, integrations }),
     createCatalogWriteAction(),
+    createFilesystemDeleteAction(),
+    createFilesystemListAction(),
+    createFilesystemRenameAction(),
   ];
 };
